@@ -1,6 +1,6 @@
 {
   "name": "graphql-faker",
-  "version": "2.0.0-rc.17",
+  "version": "2.0.0-alec",
   "description": "Mock or extend your GraphQL API with faked data. No coding required",
   "main": "dist/index.js",
   "bin": "dist/index.js",
@@ -16,7 +16,7 @@
     "copy:graphql": "cp src/*.graphql dist/",
     "copy:editor": "mkdir -p dist/editor && cp src/editor/*.{html,js,css,svg} dist/editor",
     "build:all": "npm run build:editor && npm run build:typescript && npm run copy:graphql && npm run copy:editor",
-    "prepare": "npm run build"
+    "prepare": "npm run build:all"
   },
   "repository": {
     "type": "git",
