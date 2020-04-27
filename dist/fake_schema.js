@@ -28,9 +28,9 @@ exports.fakeFieldResolver = async (source, args, context, info) => {
     const isCompositeReturn = graphql_1.isCompositeType(graphql_1.getNullableType(fieldDef.type));
     if (isMutation && isCompositeReturn && isPlainObject(resolved)) {
         const inputArg = args['input'];
-        return Object.assign(Object.assign({}, resolved), (Object.keys(args).length === 1 && isPlainObject(inputArg)
+        return Object.assign(Object.assign({}, (Object.keys(args).length === 1 && isPlainObject(inputArg)
             ? inputArg
-            : args));
+            : args)), resolved);
     }
     return resolved;
     function fakeValueOfType(type) {
